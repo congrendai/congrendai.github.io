@@ -4,8 +4,10 @@ eq:binom
 linux
 basic-commands
 advanced-commands
-hello-bookdown
-a-section
+matplotlib
+beginners
+intermediate-users
+tips-tricks
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
