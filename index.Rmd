@@ -1,0 +1,133 @@
+--- 
+title: "Congren's Notes"
+author: "Author: Congren Dai"
+date: "Last updated on `r format(Sys.time(), '%d %B, %Y')`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Linux Commands {#linux}
+
+What behind the ___#___ is the explanation of the command.  
+___demo.txt___ or ___demo.zip___ is a file name.  
+___demo___ or ___desktop___ is a directory name.
+
+## Basic Commands
+<font size="5">__pwd__</font>
+```{bash eval=FALSE, engine='-l', eval=FALSE}
+pwd # check the path from the root to the current directory
+```
+
+<font size="5">__cd__</font> 
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+cd / # change directory to the root directory
+cd .. # change directory to the upper directory
+```
+
+<font size="5">__ls__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+ls # simply check the names of all the files or directories inside of current directory
+ls -l # more detailed information will be presented with the names of all the files or directories inside of current directory
+ls -la # more detailed information will be presented with the names of all the files or directories (including hidden files or directories) inside of current directory
+```
+Hidden files or directories start with ".", such as ".demo.txt" or ".demo"
+
+<br>
+<font size="5">__touch__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+touch demo.txt # create a file named demo.txt
+```
+
+<font size="5">__mv__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+mv demo.txt ~/desktop # move the demo.txt from the current directory to the desktop
+mv demo.txt demo1.txt # rename the demo.txt file to demo1.txt
+mv demo.txt ~/desktop/demo1.txt # move the demo.txt from the current directory to the desktop and rename the demo.txt file to demo1.txt
+```
+
+<font size="5">__cat__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+cat demo.txt # check the content of demo.txt
+```
+
+<font size="5">__head__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+head demo.txt # check the 10 lines from the beginning of demo.txt
+head -n 20 demo.txt # check the 20 lines from the beginning of demo.txt
+```
+
+<font size="5">__tail__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+tail demo.txt # check the 10 lines from the end of demo.txt
+tail -n 20 demo.txt # check the 20 lines from the end of demo.txt
+tail -f demo.txt # check automatically the tail of the demo.txt if there are new contents added to the demo.txt
+```
+One example of using "tail -f" is when you want to check a log file.
+
+<br>
+<font size="5">__mkdir__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+mkdir demo # make a directory called demo
+mkdir -p demo1/demo2/demo3/demo4 # make a directory called demo1 that contains demo2 that contains demo3 that contains demo4
+```
+
+<font size="5">__rm__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+rm demo.txt # delete the demo.txt file
+rm -rf demo # delete the demo directory and all the files inside of it.  
+rm -rf demo1 demo2 demo3 # delete more than one directory.
+```
+
+<font size="5">__cp__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+cp demo.txt ~/desktop/ # copy the demo.txt file to the desktop 
+cp demo.txt ~/desktop/demo1.txt # copy the demo.txt file to the desktop and rename it to demo1.txt
+cp -r demo1 demo2 # copy the demo1 directory to the demo2 directory (no need to create demo2 beforehand)
+```
+-r will be needed if you want to copy a directory.
+
+<br>
+<font size="5">__tar__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+tar -zcrf demo.tar ./demo.txt # compress the demo.txt and name the compressed file to demo.tar
+tar -zcrf demo.tar ./demo # compress all the files inside of the demo directory and name the compressed file to demo.tar
+tar -zxvf demo.tar # uncompress the demo.tar file to a directory called demo  
+tar -zxvf demo.tar -C ./Aaron # uncompress the demo.tar file to a directory called Aaron (created beforehand)
+```
+
+<font size="5">__find__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+find / -name demo.txt # find a file called demo.txt from the root directory
+find ~/desktop -name demo.txt # narrow down the range of searching if you are sure that the demo.txt is inside of your desktop
+find / -name demo* # find any file that starts with demo from the root directory
+find / -name *.txt # find any file that ends with .txt from the root directory
+```
+If you are using a MacBook, you have to change the command to find / -name 'demo.txt' or find / -name "demo.txt"
+
+## Advanced Commands
+
+<font size="5">__ps__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+```
+
+<font size="5">__grep__</font>
+```{bash eval=FALSE, engine.opts='-l', eval=FALSE}
+```
+
+@xie2015
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
