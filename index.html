@@ -165,8 +165,27 @@ div.csl-indent {
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Linux Commands</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#basic-commands"><i class="fa fa-check"></i><b>1.1</b> Basic Commands</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#advanced-commands"><i class="fa fa-check"></i><b>1.2</b> Advanced Commands</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#basic-commands"><i class="fa fa-check"></i><b>1.1</b> Basic Commands</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pwd"><i class="fa fa-check"></i>pwd</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cd"><i class="fa fa-check"></i>cd</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ls"><i class="fa fa-check"></i>ls</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#touch"><i class="fa fa-check"></i>touch</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#mv"><i class="fa fa-check"></i>mv</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cat"><i class="fa fa-check"></i>cat</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#head"><i class="fa fa-check"></i>head</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tail"><i class="fa fa-check"></i>tail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#mkdir"><i class="fa fa-check"></i>mkdir</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#rm"><i class="fa fa-check"></i>rm</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cp"><i class="fa fa-check"></i>cp</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tar"><i class="fa fa-check"></i>tar</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#find"><i class="fa fa-check"></i>find</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#advanced-commands"><i class="fa fa-check"></i><b>1.2</b> Advanced Commands</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ps"><i class="fa fa-check"></i>ps</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#grep"><i class="fa fa-check"></i>grep</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
 <ul>
@@ -231,76 +250,103 @@ div.csl-indent {
 <strong><em>demo</em></strong> or <strong><em>desktop</em></strong> is a directory name.</p>
 <div id="basic-commands" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Basic Commands<a href="index.html#basic-commands" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><font size="5"><strong>pwd</strong></font></p>
+<div id="pwd" class="section level3 unnumbered hasAnchor">
+<h3>pwd<a href="index.html#pwd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># check the current path from the root</span></span></code></pre></div>
-<p><font size="5"><strong>cd</strong></font></p>
+</div>
+<div id="cd" class="section level3 unnumbered hasAnchor">
+<h3>cd<a href="index.html#cd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> / <span class="co"># change directory to the root directory</span></span>
 <span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> .. <span class="co"># change directory to the upper directory</span></span></code></pre></div>
-<p><font size="5"><strong>ls</strong></font></p>
+</div>
+<div id="ls" class="section level3 unnumbered hasAnchor">
+<h3>ls<a href="index.html#ls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="co"># list files</span></span>
 <span id="cb3-2"><a href="index.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> <span class="co"># list files with permissions</span></span>
 <span id="cb3-3"><a href="index.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span> <span class="co"># list (hidden) files with permissions</span></span></code></pre></div>
-<p>Hidden files or directories start with “.”, such as “.demo.txt” or “.demo”</p>
-<p><br>
-<font size="5"><strong>touch</strong></font></p>
+</div>
+<div id="touch" class="section level3 unnumbered hasAnchor">
+<h3>touch<a href="index.html#touch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> demo.txt <span class="co"># create a file</span></span>
 <span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> demo1.txt demo2.txt demo3.txt <span class="co"># create files</span></span></code></pre></div>
-<p><font size="5"><strong>mv</strong></font></p>
+</div>
+<div id="mv" class="section level3 unnumbered hasAnchor">
+<h3>mv<a href="index.html#mv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="index.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt ~/desktop <span class="co"># move a file</span></span>
 <span id="cb5-2"><a href="index.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt demo1.txt <span class="co"># rename a file</span></span>
 <span id="cb5-3"><a href="index.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt ~/desktop/demo1.txt <span class="co"># move and rename a file to a new place</span></span></code></pre></div>
-<p><font size="5"><strong>cat</strong></font></p>
+</div>
+<div id="cat" class="section level3 unnumbered hasAnchor">
+<h3>cat<a href="index.html#cat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> demo.txt <span class="co"># see the contents of a file</span></span></code></pre></div>
-<p><font size="5"><strong>head</strong></font></p>
+</div>
+<div id="head" class="section level3 unnumbered hasAnchor">
+<h3>head<a href="index.html#head" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="index.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> demo.txt <span class="co"># check first 10 lines of the contents</span></span>
 <span id="cb7-2"><a href="index.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 20 demo.txt <span class="co"># check 20 lines of the contents</span></span></code></pre></div>
-<p><font size="5"><strong>tail</strong></font></p>
+</div>
+<div id="tail" class="section level3 unnumbered hasAnchor">
+<h3>tail<a href="index.html#tail" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="index.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> demo.txt <span class="co"># check last 10 lines of the contents</span></span>
 <span id="cb8-2"><a href="index.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> 20 demo.txt <span class="co"># check 20 lines of the contents</span></span>
 <span id="cb8-3"><a href="index.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-f</span> demo.txt <span class="co"># check the added contents to the file consistently</span></span></code></pre></div>
 <p>One example of using “tail -f” is when you want to check a log file.</p>
-<p><br>
-<font size="5"><strong>mkdir</strong></font></p>
+</div>
+<div id="mkdir" class="section level3 unnumbered hasAnchor">
+<h3>mkdir<a href="index.html#mkdir" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="index.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> demo <span class="co"># make a directory</span></span>
 <span id="cb9-2"><a href="index.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> demo1/demo2/demo3/demo4 <span class="co"># make a directory recursively</span></span></code></pre></div>
-<p><font size="5"><strong>rm</strong></font></p>
+</div>
+<div id="rm" class="section level3 unnumbered hasAnchor">
+<h3>rm<a href="index.html#rm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="index.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> demo.txt <span class="co"># delete a file</span></span>
 <span id="cb10-2"><a href="index.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> demo <span class="co"># delete a directory  </span></span>
 <span id="cb10-3"><a href="index.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> demo1 demo2 demo3 <span class="co"># delete more than one directory.</span></span>
 <span id="cb10-4"><a href="index.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> demo1.txt demo2.txt demo3.txt <span class="co"># delete more than one file</span></span></code></pre></div>
-<p><font size="5"><strong>cp</strong></font></p>
+</div>
+<div id="cp" class="section level3 unnumbered hasAnchor">
+<h3>cp<a href="index.html#cp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="index.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> demo.txt ~/desktop/ <span class="co"># copy a file to the desktop </span></span>
 <span id="cb11-2"><a href="index.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> demo.txt ~/desktop/demo1.txt <span class="co"># copy a file and rename it</span></span>
 <span id="cb11-3"><a href="index.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> demo1 ~/desktop/demo1 <span class="co"># copy a directory and rename it</span></span></code></pre></div>
-<p><font size="5"><strong>tar</strong></font></p>
+</div>
+<div id="tar" class="section level3 unnumbered hasAnchor">
+<h3>tar<a href="index.html#tar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="index.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zcvf</span> demo.tar.gz ./demo.txt <span class="co"># create an archive (file)</span></span>
 <span id="cb12-2"><a href="index.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zcvf</span> demo.tar.gz ./demo <span class="co"># create an archive (directory)</span></span>
 <span id="cb12-3"><a href="index.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> demo.tar.gz <span class="co"># uncompress an archive</span></span>
 <span id="cb12-4"><a href="index.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> demo.tar.gz <span class="at">-C</span> ./Aaron <span class="co"># uncompress and rename an archive</span></span>
 <span id="cb12-5"><a href="index.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-tf</span> demo.tar.gz <span class="co"># see the files in an archive</span></span></code></pre></div>
-<p>A .tar file creates an archive without compressing.<br />
-A .gz (gzip) file compresses files without creating an archive.<br />
-A .tar.gz file archives and compresses multiple files into one.<br />
+<p>A .tar file creates an archive without compressing<br />
+A .gz (gzip) file compresses files without creating an archive<br />
+A .tar.gz file archives and compresses multiple files into one<br />
 -z: use gzip<br />
 -c: create archives<br />
--v: display information (not necessary to use)
+-v: display information (not necessary to use)<br />
 -f: creates archives with given filename<br />
--C: uncompress archives to a specific place.</p>
-<p><font size="5"><strong>find</strong></font></p>
+-C: uncompress archives to a specific place</p>
+</div>
+<div id="find" class="section level3 unnumbered hasAnchor">
+<h3>find<a href="index.html#find" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="index.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-name</span> demo.txt <span class="co"># find a file from the root</span></span>
 <span id="cb13-2"><a href="index.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> ~/desktop <span class="at">-name</span> demo.txt <span class="co"># find a file from the desktop</span></span>
 <span id="cb13-3"><a href="index.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-name</span> demo<span class="pp">*</span> <span class="co"># find any file that starts with demo from the root directory</span></span>
 <span id="cb13-4"><a href="index.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-name</span> <span class="pp">*</span>.txt <span class="co"># find any file that ends with .txt from the root directory</span></span></code></pre></div>
-<p>If you are using macOS, you have to change the command to find / -name ‘demo.txt’ or find / -name “demo.txt”</p>
+<p>If you are using macOS, you have to change the command to find / -name ‘demo.txt’.</p>
+</div>
 </div>
 <div id="advanced-commands" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Advanced Commands<a href="index.html#advanced-commands" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><font size="5"><strong>ps</strong></font></p>
+<div id="ps" class="section level3 unnumbered hasAnchor">
+<h3>ps<a href="index.html#ps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
-<p><font size="5"><strong>grep</strong></font></p>
+</div>
+<div id="grep" class="section level3 unnumbered hasAnchor">
+<h3>grep<a href="index.html#grep" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
 <p><span class="citation">Xie (<a href="#ref-xie2015" role="doc-biblioref">2015</a>)</span></p>
 
+</div>
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
