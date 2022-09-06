@@ -1,3 +1,6 @@
+fig:beginner
+fig:intermediate
+fig:tips
 fig:nice-fig
 tab:nice-tab
 eq:binom

@@ -30,3 +30,13 @@ pre code {
 .summary > li:first-child {
   height: auto !important; 
 }
+
+/*____Code Chunks____*/
+
+.sourceCode pre {
+  margin: 0 !important; /* makes space above and below symmetrical*/
+}
+
+.sourceCode {
+  margin-bottom: 0.85em; /* adds same amount of margin as a <p> would */
+}
