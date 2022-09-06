@@ -17,7 +17,7 @@ sums-and-integrals
 fractions
 radical-signs-roots
 special-functions
-special-symbols-and-notations
+special-symbols
 accents-and-diacritical-marks
 matrix
 matrix-with-delimiters
