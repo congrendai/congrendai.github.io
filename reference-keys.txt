@@ -12,7 +12,7 @@ mathematics-in-latex-markdown
 greek-letters
 superscripts-and-subscripts
 group
-parentheses
+parentheses-brackets-and-braces
 sums-and-integrals
 fractions
 radical-signs-roots
@@ -20,7 +20,7 @@ special-functions
 special-symbols-and-notations
 accents-and-diacritical-marks
 matrix
-matrix-parentheses
+matrix-with-delimiters
 dots
 array
 simultaneous-equation

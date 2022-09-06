@@ -193,7 +193,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.1" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#greek-letters"><i class="fa fa-check"></i><b>3.1</b> Greek Letters</a></li>
 <li class="chapter" data-level="3.2" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#superscripts-and-subscripts"><i class="fa fa-check"></i><b>3.2</b> Superscripts and Subscripts</a></li>
 <li class="chapter" data-level="3.3" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#group"><i class="fa fa-check"></i><b>3.3</b> Group</a></li>
-<li class="chapter" data-level="3.4" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#parentheses"><i class="fa fa-check"></i><b>3.4</b> Parentheses</a></li>
+<li class="chapter" data-level="3.4" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#parentheses-brackets-and-braces"><i class="fa fa-check"></i><b>3.4</b> Parentheses, Brackets, and Braces</a></li>
 <li class="chapter" data-level="3.5" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#sums-and-integrals"><i class="fa fa-check"></i><b>3.5</b> Sums and Integrals</a></li>
 <li class="chapter" data-level="3.6" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#fractions"><i class="fa fa-check"></i><b>3.6</b> Fractions</a></li>
 <li class="chapter" data-level="3.7" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#radical-signs-roots"><i class="fa fa-check"></i><b>3.7</b> Radical Signs / Roots</a></li>
@@ -202,7 +202,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.10" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#accents-and-diacritical-marks"><i class="fa fa-check"></i><b>3.10</b> Accents and Diacritical Marks</a></li>
 <li class="chapter" data-level="3.11" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#matrix"><i class="fa fa-check"></i><b>3.11</b> Matrix</a>
 <ul>
-<li class="chapter" data-level="3.11.1" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#matrix-parentheses"><i class="fa fa-check"></i><b>3.11.1</b> Matrix Parentheses</a></li>
+<li class="chapter" data-level="3.11.1" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#matrix-with-delimiters"><i class="fa fa-check"></i><b>3.11.1</b> Matrix with Delimiters</a></li>
 <li class="chapter" data-level="3.11.2" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#dots"><i class="fa fa-check"></i><b>3.11.2</b> Dots</a></li>
 <li class="chapter" data-level="3.11.3" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#array"><i class="fa fa-check"></i><b>3.11.3</b> Array</a></li>
 </ul></li>
@@ -333,18 +333,18 @@ Subscripts use <code>_</code></p>
 </div>
 <div id="group" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Group<a href="mathematics-in-latex-markdown.html#group" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A “group” is any formula surrounded by curly brackets <code>{…}</code>.</p>
+<p>A “group” is any formula surrounded by braces <code>{…}</code>.</p>
 <p><code>10^10</code>: <span class="math inline">\(10^10\)</span> (not wanted)<br />
 <code>10^{10}</code>: <span class="math inline">\(10^{10}\)</span><br />
 <code>x_i^2</code>: <span class="math inline">\(x_i^2\)</span><br />
 <code>x_{i^2}</code>: <span class="math inline">\(x_{i^2}\)</span><br />
 <code>{x_i}^2</code>: <span class="math inline">\({x_i}^2\)</span></p>
 </div>
-<div id="parentheses" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Parentheses<a href="mathematics-in-latex-markdown.html#parentheses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="parentheses-brackets-and-braces" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Parentheses, Brackets, and Braces<a href="mathematics-in-latex-markdown.html#parentheses-brackets-and-braces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Parentheses use <code>()</code><br />
 Brackets use <code>[]</code><br />
-Curly brackets use <code>\{</code> and <code>\}</code></p>
+Braces use <code>\{</code> and <code>\}</code></p>
 <p><strong><em>These do not scale with the formula in between.</em></strong></p>
 <p>Using <code>\left(</code> and <code>\right)</code> will make the sizes adjust automatically to the formula they enclose.</p>
 <p><code>(\frac{\sqrt x}{y^3})</code>: <span class="math inline">\((\frac{\sqrt x}{y^3})\)</span></p>
@@ -517,7 +517,7 @@ Integrals use: <code>\int</code></p>
 </div>
 <div id="matrix" class="section level2 hasAnchor" number="3.11">
 <h2><span class="header-section-number">3.11</span> Matrix<a href="mathematics-in-latex-markdown.html#matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A matrix block begins with <code>\begin{matrix}</code> and ends with <code>\end{matrix}</code>.</p>
+<p>A plain matrix block begins with <code>\begin{matrix}</code> and ends with <code>\end{matrix}</code>.</p>
 <p><code>&amp;</code> uses for columns.<br />
 <code>\\</code> uses for rows.</p>
 <p><strong><em>For example,</em></strong></p>
@@ -531,9 +531,9 @@ Integrals use: <code>\int</code></p>
 0&amp;1&amp;0\\
 0&amp;0&amp;1
 \end{matrix}\]</span></p>
-<div id="matrix-parentheses" class="section level3 hasAnchor" number="3.11.1">
-<h3><span class="header-section-number">3.11.1</span> Matrix Parentheses<a href="mathematics-in-latex-markdown.html#matrix-parentheses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Round brackets:</p>
+<div id="matrix-with-delimiters" class="section level3 hasAnchor" number="3.11.1">
+<h3><span class="header-section-number">3.11.1</span> Matrix with Delimiters<a href="mathematics-in-latex-markdown.html#matrix-with-delimiters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Parentheses:</p>
 <p><code>\begin{pmatrix}</code><br />
 <code>1 &amp; 2 &amp; 3\\</code><br />
 <code>a &amp; b &amp; c</code><br />
@@ -542,7 +542,7 @@ Integrals use: <code>\int</code></p>
 1 &amp; 2 &amp; 3\\
 a &amp; b &amp; c
 \end{pmatrix}\]</span></p>
-<p>Square brackets:</p>
+<p>Brackets:</p>
 <p><code>\begin{bmatrix}</code><br />
 <code>1 &amp; 2 &amp; 3\\</code><br />
 <code>a &amp; b &amp; c</code><br />
@@ -551,7 +551,7 @@ a &amp; b &amp; c
 1 &amp; 2 &amp; 3\\
 a &amp; b &amp; c
 \end{bmatrix}\]</span></p>
-<p>Curly brackets:</p>
+<p>Braces:</p>
 <p><code>\begin{Bmatrix}</code><br />
 <code>1 &amp; 2 &amp; 3\\</code><br />
 <code>a &amp; b &amp; c</code><br />
