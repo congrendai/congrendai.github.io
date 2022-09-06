@@ -154,18 +154,20 @@ code span.wa { color: #da4453; } /* Warning */
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#cp"><i class="fa fa-check"></i>cp</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#tar"><i class="fa fa-check"></i>tar</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#find"><i class="fa fa-check"></i>find</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#scp"><i class="fa fa-check"></i>scp</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#advanced"><i class="fa fa-check"></i><b>1.2</b> Advanced Commands</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#ps"><i class="fa fa-check"></i>ps</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#grep"><i class="fa fa-check"></i>grep</a></li>
 </ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#shortcuts-for-shell"><i class="fa fa-check"></i><b>1.3</b> Shortcuts for Shell</a></li>
 </ul></li>
 <li class="part"><span><b>Python</b></span></li>
 <li class="chapter" data-level="2" data-path="matplotlib.html"><a href="matplotlib.html"><i class="fa fa-check"></i><b>2</b> Matplotlib</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="matplotlib.html"><a href="matplotlib.html#beginners"><i class="fa fa-check"></i><b>2.1</b> Beginners</a></li>
-<li class="chapter" data-level="2.2" data-path="matplotlib.html"><a href="matplotlib.html#intermediate-users"><i class="fa fa-check"></i><b>2.2</b> Intermediate users</a></li>
+<li class="chapter" data-level="2.2" data-path="matplotlib.html"><a href="matplotlib.html#intermediate-users"><i class="fa fa-check"></i><b>2.2</b> Intermediate Users</a></li>
 <li class="chapter" data-level="2.3" data-path="matplotlib.html"><a href="matplotlib.html#tips-tricks"><i class="fa fa-check"></i><b>2.3</b> Tips &amp; Tricks</a></li>
 </ul></li>
 <li class="part"><span><b>LaTeX</b></span></li>
@@ -213,11 +215,11 @@ code span.wa { color: #da4453; } /* Warning */
 <div id="header">
 <h1 class="title">Congren’s Notes</h1>
 <p class="author"><em>Author: Congren Dai</em></p>
-<p class="date"><em>Last update at 23:47 on September 06, 2022</em></p>
+<p class="date"><em>Last update at 00:41 on September 07, 2022</em></p>
 </div>
 <div id="linux-commands" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Linux Commands<a href="index.html#linux-commands" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This chapter contains <a href="index.html#basic">basic commands</a> and <a href="index.html#advanced">advanced commands</a> for Linux.</p>
+<p>This chapter contains <a href="index.html#basic">basic commands</a>, <a href="index.html#advanced">advanced commands</a>, and some <a href="index.html#shortcuts-for-shell">shortcuts for shell</a> in Linux.</p>
 <div id="basic" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Basic Commands<a href="index.html#basic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="ls" class="section level3 unnumbered hasAnchor">
@@ -296,19 +298,40 @@ A .tar.gz file archives and compresses multiple files into one<br />
 <span id="cb11-4"><a href="index.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-name</span> <span class="pp">*</span>.txt <span class="co"># find any file that ends with .txt from the root directory</span></span></code></pre></div>
 <p>If you are using macOS, you have to change the command to find / -name ‘demo.txt’.</p>
 </div>
+<div id="scp" class="section level3 unnumbered hasAnchor">
+<h3>scp<a href="index.html#scp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="index.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ~/desktop/demo.txt ubuntu@your_server_ip:/ <span class="co"># upload a file to the server</span></span>
+<span id="cb12-2"><a href="index.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> ~/desktop/demo ubuntu@your_server_ip:/ <span class="co"># upload a directory to the server</span></span>
+<span id="cb12-3"><a href="index.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ubuntu@your_server_ip:/demo.txt ~/desktop/ <span class="co"># download a file from the server</span></span>
+<span id="cb12-4"><a href="index.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> ubuntu@your_server_ip:/demo ~/desktop/ <span class="co"># download a directory from the server</span></span></code></pre></div>
+</div>
 </div>
 <div id="advanced" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Advanced Commands<a href="index.html#advanced" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="ps" class="section level3 unnumbered hasAnchor">
 <h3>ps<a href="index.html#ps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
 </div>
 <div id="grep" class="section level3 unnumbered hasAnchor">
 <h3>grep<a href="index.html#grep" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+</div>
+</div>
+<div id="shortcuts-for-shell" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Shortcuts for Shell<a href="index.html#shortcuts-for-shell" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Windows users use <kbd>Ctrl</kbd><br />
+macOS users use <kbd>⌃ Control</kbd></p>
+<ol style="list-style-type: decimal">
+<li>Move the cursor to the start of a command: <kbd>⌃ Control</kbd> + <kbd>A</kbd><br />
+</li>
+<li>Move the cursor to the end of a command: <kbd>⌃ Control</kbd> + <kbd>E</kbd><br />
+</li>
+<li>Clear the shell screen: <kbd>⌃ Control</kbd> + <kbd>L</kbd><br />
+</li>
+<li>Clear before the cursor until the start of a command: <kbd>⌃ Control</kbd> + <kbd>U</kbd> (functions as <strong><em>clear line</em></strong> if the cursor is at the end of the command)</li>
+</ol>
 <!--``` @xie2015 -->
 
-</div>
 </div>
 </div>
 
@@ -348,7 +371,7 @@ gitbook.start({
 "fontsettings": {
 "theme": "night",
 "family": "sans",
-"size": 1
+"size": 2
 },
 "edit": {
 "link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",

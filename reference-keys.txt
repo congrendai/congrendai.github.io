@@ -4,6 +4,7 @@ fig:tips
 linux-commands
 basic
 advanced
+shortcuts-for-shell
 matplotlib
 beginners
 intermediate-users
