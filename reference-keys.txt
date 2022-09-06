@@ -4,9 +4,9 @@ fig:tips
 fig:nice-fig
 tab:nice-tab
 eq:binom
-linux
-basic-commands
-advanced-commands
+linux-commands
+basic
+advanced
 matplotlib
 beginners
 intermediate-users
