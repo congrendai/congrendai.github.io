@@ -2,8 +2,7 @@ fig:beginner
 fig:intermediate
 fig:tips
 linux-commands
-basic
-advanced
+frequently-used
 shortcuts-for-shell
 matplotlib
 beginners
