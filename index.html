@@ -155,6 +155,7 @@ code span.wa { color: #da4453; } /* Warning */
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#tar"><i class="fa fa-check"></i>tar</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#find"><i class="fa fa-check"></i>find</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#scp"><i class="fa fa-check"></i>scp</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#curl"><i class="fa fa-check"></i>curl</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#chmod"><i class="fa fa-check"></i>chmod</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#ps"><i class="fa fa-check"></i>ps</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#grep"><i class="fa fa-check"></i>grep</a></li>
@@ -213,7 +214,7 @@ code span.wa { color: #da4453; } /* Warning */
 <div id="header">
 <h1 class="title">Congren’s Notes</h1>
 <p class="author"><em>Author: Congren Dai</em></p>
-<p class="date"><em>Last update at 03:53 on September 08, 2022</em></p>
+<p class="date"><em>Last update at 13:20 on October 01, 2022</em></p>
 </div>
 <div id="linux-commands" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Linux Commands<a href="index.html#linux-commands" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -305,19 +306,26 @@ A .tar.gz file archives and compresses multiple files into one archive.<br />
 <p>To successfully <strong><em>upload</em></strong> or <strong><em>download</em></strong> files or directories to/from a server, you have to use <strong><em>root</em></strong>@your_server_ip to connect the server, instead of using <strong><em>ubuntu</em></strong>@your_server_ip (normally we do to ssh). To do so, you have to change <strong><em>#PermitRootLogin no</em></strong> to <strong><em>PermitRootLogin yes</em></strong> in <strong><em>/etc/ssh/sshd_config</em></strong>. Then, restart the SSH server by</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="index.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">service</span> sshd restart</span></code></pre></div>
 </div>
+<div id="curl" class="section level3 unnumbered hasAnchor">
+<h3>curl<a href="index.html#curl" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="index.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://www.demo.com/demo.pdf ~/desktop <span class="co"># Download a file from the url to desktop</span></span>
+<span id="cb14-2"><a href="index.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-o</span> wanted_name.pdf https://www.demo.com/demo.pdf</span></code></pre></div>
+<p>-O (capital o) means that save the file as the same as the downloaded file’s name.<br />
+-o means that save the file and name it as you want.</p>
+</div>
 <div id="chmod" class="section level3 unnumbered hasAnchor">
 <h3>chmod<a href="index.html#chmod" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="index.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 644 demo.txt <span class="co"># change permissions for a file (644 is recommended for files)</span></span>
-<span id="cb14-2"><a href="index.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-R</span> 755 demo <span class="co"># change permissions for a directory (755 is recommended for directories)</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="index.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 644 demo.txt <span class="co"># change permissions for a file (644 is recommended for files)</span></span>
+<span id="cb15-2"><a href="index.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-R</span> 755 demo <span class="co"># change permissions for a directory (755 is recommended for directories)</span></span></code></pre></div>
 <p>More information about 644 and 755, please visit <a href="https://linuxhandbook.com/chmod-command/" class="uri">https://linuxhandbook.com/chmod-command/</a>.</p>
 </div>
 <div id="ps" class="section level3 unnumbered hasAnchor">
 <h3>ps<a href="index.html#ps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
 </div>
 <div id="grep" class="section level3 unnumbered hasAnchor">
 <h3>grep<a href="index.html#grep" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
 </div>
 </div>
 <div id="shortcuts-for-shell" class="section level2 hasAnchor" number="1.2">
