@@ -216,7 +216,7 @@ code span.wa { color: #da4453; } /* Warning */
 <div id="header">
 <h1 class="title">Congren’s Notes</h1>
 <p class="author"><em>Author: Congren Dai</em></p>
-<p class="date"><em>Last update at 12:20 on October 03, 2022</em></p>
+<p class="date"><em>Last update at 22:22 on October 03, 2022</em></p>
 </div>
 <div id="linux-commands" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Linux Commands<a href="index.html#linux-commands" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -240,9 +240,9 @@ code span.wa { color: #da4453; } /* Warning */
 </div>
 <div id="mv" class="section level3 unnumbered hasAnchor">
 <h3>mv<a href="index.html#mv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt ~/desktop <span class="co"># move a file</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt ~/Desktop <span class="co"># move a file</span></span>
 <span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt demo1.txt <span class="co"># rename a file</span></span>
-<span id="cb4-3"><a href="index.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt ~/desktop/demo1.txt <span class="co"># move and rename a file to a new place</span></span></code></pre></div>
+<span id="cb4-3"><a href="index.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> demo.txt ~/Desktop/demo1.txt <span class="co"># move and rename a file to a new place</span></span></code></pre></div>
 </div>
 <div id="cat" class="section level3 unnumbered hasAnchor">
 <h3>cat<a href="index.html#cat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -281,9 +281,9 @@ It is preferred, when the content is long</p>
 </div>
 <div id="cp" class="section level3 unnumbered hasAnchor">
 <h3>cp<a href="index.html#cp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="index.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> demo.txt ~/desktop/ <span class="co"># copy a file to the desktop </span></span>
-<span id="cb11-2"><a href="index.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> demo.txt ~/desktop/demo1.txt <span class="co"># copy a file and rename it</span></span>
-<span id="cb11-3"><a href="index.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> demo1 ~/desktop/demo1 <span class="co"># copy a directory and rename it</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="index.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> demo.txt ~/Desktop/ <span class="co"># copy a file to the desktop </span></span>
+<span id="cb11-2"><a href="index.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> demo.txt ~/Desktop/demo1.txt <span class="co"># copy a file and rename it</span></span>
+<span id="cb11-3"><a href="index.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> demo1 ~/Desktop/demo1 <span class="co"># copy a directory and rename it</span></span></code></pre></div>
 </div>
 <div id="tar" class="section level3 unnumbered hasAnchor">
 <h3>tar<a href="index.html#tar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -305,23 +305,23 @@ A .tar.gz file archives and compresses multiple files into one archive.<br />
 <div id="find" class="section level3 unnumbered hasAnchor">
 <h3>find<a href="index.html#find" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="index.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-name</span> demo.txt <span class="co"># find a file from the root directory</span></span>
-<span id="cb13-2"><a href="index.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> ~/desktop <span class="at">-name</span> demo.txt <span class="co"># find a file from the desktop</span></span>
+<span id="cb13-2"><a href="index.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> ~/Desktop <span class="at">-name</span> demo.txt <span class="co"># find a file from the desktop</span></span>
 <span id="cb13-3"><a href="index.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-name</span> demo<span class="pp">*</span> <span class="co"># find any file that starts with demo from the root directory</span></span>
 <span id="cb13-4"><a href="index.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-name</span> <span class="pp">*</span>.txt <span class="co"># find any file that ends with .txt from the root directory</span></span></code></pre></div>
 <p>If you are using macOS, you have to change the command to find / -name ‘demo.txt’.</p>
 </div>
 <div id="scp" class="section level3 unnumbered hasAnchor">
 <h3>scp<a href="index.html#scp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="index.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ~/desktop/demo.txt root@your_server_ip:/ <span class="co"># upload a file to the server</span></span>
-<span id="cb14-2"><a href="index.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> ~/desktop/demo root@your_server_ip:/ <span class="co"># upload a directory to the server</span></span>
-<span id="cb14-3"><a href="index.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> root@your_server_ip:/demo.txt ~/desktop/ <span class="co"># download a file from the server</span></span>
-<span id="cb14-4"><a href="index.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> root@your_server_ip:/demo ~/desktop/ <span class="co"># download a directory from the server</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="index.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ~/Desktop/demo.txt root@your_server_ip:/ <span class="co"># upload a file to the server</span></span>
+<span id="cb14-2"><a href="index.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> ~/Desktop/demo root@your_server_ip:/ <span class="co"># upload a directory to the server</span></span>
+<span id="cb14-3"><a href="index.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> root@your_server_ip:/demo.txt ~/Desktop/ <span class="co"># download a file from the server</span></span>
+<span id="cb14-4"><a href="index.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> root@your_server_ip:/demo ~/Desktop/ <span class="co"># download a directory from the server</span></span></code></pre></div>
 <p>To successfully <strong><em>upload</em></strong> or <strong><em>download</em></strong> files or directories to/from a server, you have to use <strong><em>root</em></strong>@your_server_ip to connect the server, instead of using <strong><em>ubuntu</em></strong>@your_server_ip (normally we do to ssh). To do so, you have to change <strong><em>#PermitRootLogin no</em></strong> to <strong><em>PermitRootLogin yes</em></strong> in <strong><em>/etc/ssh/sshd_config</em></strong>. Then, restart the SSH server by</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="index.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">service</span> sshd restart</span></code></pre></div>
 </div>
 <div id="curl" class="section level3 unnumbered hasAnchor">
 <h3>curl<a href="index.html#curl" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="index.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://www.demo.com/demo.pdf ~/desktop <span class="co"># Download a file from the url to desktop</span></span>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="index.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://www.demo.com/demo.pdf ~/Desktop <span class="co"># Download a file from the url to the desktop</span></span>
 <span id="cb16-2"><a href="index.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-o</span> wanted_name.pdf https://www.demo.com/demo.pdf</span></code></pre></div>
 <p>-O (capital o) means that save the file as the same as the downloaded file’s name.<br />
 -o means that save the file and name it as you want.</p>
