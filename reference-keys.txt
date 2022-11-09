@@ -8,7 +8,7 @@ matplotlib
 beginners
 intermediate-users
 tips-tricks
-mathematics-in-latex-markdown
+mathematics-in-latex
 greek-letters
 superscripts-and-subscripts
 group
