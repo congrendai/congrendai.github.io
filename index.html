@@ -159,7 +159,6 @@ code span.wa { color: #da4453; } /* Warning */
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#scp"><i class="fa fa-check"></i>scp</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#curl"><i class="fa fa-check"></i>curl</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#chmod"><i class="fa fa-check"></i>chmod</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ps"><i class="fa fa-check"></i>ps</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#grep"><i class="fa fa-check"></i>grep</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#shortcuts-for-shell"><i class="fa fa-check"></i><b>1.2</b> Shortcuts for Shell</a></li>
@@ -216,7 +215,7 @@ code span.wa { color: #da4453; } /* Warning */
 <div id="header">
 <h1 class="title">Congren’s Notes</h1>
 <p class="author"><em>Author: Congren Dai</em></p>
-<p class="date"><em>Last update at 05:15 on November 09, 2022</em></p>
+<p class="date"><em>Last update at 22:11 on November 28, 2022</em></p>
 </div>
 <div id="linux-commands" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Linux Commands<a href="index.html#linux-commands" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -252,8 +251,7 @@ code span.wa { color: #da4453; } /* Warning */
 <div id="less" class="section level3 unnumbered hasAnchor">
 <h3>less<a href="index.html#less" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> demo.txt <span class="co"># get the contents of a file onto the screen a page</span></span></code></pre></div>
-<p>Press <kbd>Q</kbd> to quit.<br />
-It is preferred, when the content is long</p>
+<p>Press <kbd>Q</kbd> to quit. It is preferred, when the content is long.</p>
 </div>
 <div id="head" class="section level3 unnumbered hasAnchor">
 <h3>head<a href="index.html#head" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -323,8 +321,9 @@ A .tar.gz file archives and compresses multiple files into one archive.<br />
 </div>
 <div id="curl" class="section level3 unnumbered hasAnchor">
 <h3>curl<a href="index.html#curl" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="index.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://www.demo.com/demo.pdf ~/Desktop <span class="co"># Download a file from the url to the desktop</span></span>
-<span id="cb17-2"><a href="index.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-o</span> wanted_name.pdf https://www.demo.com/demo.pdf</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="index.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://www.demo.com/demo.pdf ~/Desktop <span class="co"># download a file from the url to the desktop</span></span>
+<span id="cb17-2"><a href="index.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-o</span> wanted_name.pdf https://www.demo.com/demo.pdf</span>
+<span id="cb17-3"><a href="index.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> ifconfig.me <span class="co"># check public IP address of your Mac</span></span></code></pre></div>
 <p>-O (capital o) means that save the file as the same as the downloaded file’s name.<br />
 -o means that save the file and name it as you want.</p>
 </div>
@@ -334,13 +333,9 @@ A .tar.gz file archives and compresses multiple files into one archive.<br />
 <span id="cb18-2"><a href="index.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-R</span> 755 demo <span class="co"># change permissions for a directory (755 is recommended for directories)</span></span></code></pre></div>
 <p>More information about 644 and 755, please visit <a href="https://linuxhandbook.com/chmod-command/" class="uri">https://linuxhandbook.com/chmod-command/</a>.</p>
 </div>
-<div id="ps" class="section level3 unnumbered hasAnchor">
-<h3>ps<a href="index.html#ps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="index.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">&quot;Hello&quot;</span> demo.txt <span class="co"># search &quot;Hello&quot; in the demo.txt</span></span></code></pre></div>
-</div>
 <div id="grep" class="section level3 unnumbered hasAnchor">
 <h3>grep<a href="index.html#grep" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="index.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">&quot;Hello&quot;</span> demo.txt <span class="co"># search &quot;Hello&quot; in the demo.txt</span></span></code></pre></div>
 </div>
 </div>
 <div id="shortcuts-for-shell" class="section level2 hasAnchor" number="1.2">
