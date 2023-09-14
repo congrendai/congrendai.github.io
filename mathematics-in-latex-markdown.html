@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Mathematics in LaTeX (Markdown) | Congren’s Notes</title>
+  <meta name="description" content="This is a notebook for Aaron." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Mathematics in LaTeX (Markdown) | Congren’s Notes" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a notebook for Aaron." />
+  <meta name="github-repo" content="congrendai/congrendai.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Mathematics in LaTeX (Markdown) | Congren’s Notes" />
+  
+  <meta name="twitter:description" content="This is a notebook for Aaron." />
+  
+
+<meta name="author" content="Author: Congren Dai" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="matplotlib.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #232629;
+    color: #7a7c7d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+div.sourceCode
+  { color: #cfcfc2; background-color: #232629; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #cfcfc2; } /* Normal */
+code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+code span.an { color: #3f8058; } /* Annotation */
+code span.at { color: #2980b9; } /* Attribute */
+code span.bn { color: #f67400; } /* BaseN */
+code span.bu { color: #7f8c8d; } /* BuiltIn */
+code span.cf { color: #fdbc4b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #3daee9; } /* Char */
+code span.cn { color: #27aeae; font-weight: bold; } /* Constant */
+code span.co { color: #7a7c7d; } /* Comment */
+code span.cv { color: #7f8c8d; } /* CommentVar */
+code span.do { color: #a43340; } /* Documentation */
+code span.dt { color: #2980b9; } /* DataType */
+code span.dv { color: #f67400; } /* DecVal */
+code span.er { color: #da4453; text-decoration: underline; } /* Error */
+code span.ex { color: #0099ff; font-weight: bold; } /* Extension */
+code span.fl { color: #f67400; } /* Float */
+code span.fu { color: #8e44ad; } /* Function */
+code span.im { color: #27ae60; } /* Import */
+code span.in { color: #c45b00; } /* Information */
+code span.kw { color: #cfcfc2; font-weight: bold; } /* Keyword */
+code span.op { color: #cfcfc2; } /* Operator */
+code span.ot { color: #27ae60; } /* Other */
+code span.pp { color: #27ae60; } /* Preprocessor */
+code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #da4453; } /* SpecialString */
+code span.st { color: #f44f4f; } /* String */
+code span.va { color: #27aeae; } /* Variable */
+code span.vs { color: #da4453; } /* VerbatimString */
+code span.wa { color: #da4453; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><img src="images/logo.png"></li>
+
+<li class="divider"></li>
+<li class="part"><span><b>Linux</b></span></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Linux Commands</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#frequently-used"><i class="fa fa-check"></i><b>1.1</b> Frequently-used Commands</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ls"><i class="fa fa-check"></i>ls</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#touch"><i class="fa fa-check"></i>touch</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#echo"><i class="fa fa-check"></i>echo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#mv"><i class="fa fa-check"></i>mv</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cat"><i class="fa fa-check"></i>cat</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#less"><i class="fa fa-check"></i>less</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#head"><i class="fa fa-check"></i>head</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tail"><i class="fa fa-check"></i>tail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#mkdir"><i class="fa fa-check"></i>mkdir</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#rm"><i class="fa fa-check"></i>rm</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cp"><i class="fa fa-check"></i>cp</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tar"><i class="fa fa-check"></i>tar</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#find"><i class="fa fa-check"></i>find</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#scp"><i class="fa fa-check"></i>scp</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#curl"><i class="fa fa-check"></i>curl</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#chmod"><i class="fa fa-check"></i>chmod</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ps"><i class="fa fa-check"></i>ps</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#grep"><i class="fa fa-check"></i>grep</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#shortcuts-for-shell"><i class="fa fa-check"></i><b>1.2</b> Shortcuts for Shell</a></li>
+</ul></li>
+<li class="part"><span><b>Python</b></span></li>
+<li class="chapter" data-level="2" data-path="matplotlib.html"><a href="matplotlib.html"><i class="fa fa-check"></i><b>2</b> Matplotlib</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="matplotlib.html"><a href="matplotlib.html#beginners"><i class="fa fa-check"></i><b>2.1</b> Beginners</a></li>
+<li class="chapter" data-level="2.2" data-path="matplotlib.html"><a href="matplotlib.html#intermediate-users"><i class="fa fa-check"></i><b>2.2</b> Intermediate Users</a></li>
+<li class="chapter" data-level="2.3" data-path="matplotlib.html"><a href="matplotlib.html#tips-tricks"><i class="fa fa-check"></i><b>2.3</b> Tips &amp; Tricks</a></li>
+</ul></li>
+<li class="part"><span><b>LaTeX</b></span></li>
+<li class="chapter" data-level="3" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html"><i class="fa fa-check"></i><b>3</b> Mathematics in LaTeX (Markdown)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#greek-letters"><i class="fa fa-check"></i><b>3.1</b> Greek Letters</a></li>
+<li class="chapter" data-level="3.2" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#superscripts-and-subscripts"><i class="fa fa-check"></i><b>3.2</b> Superscripts and Subscripts</a></li>
+<li class="chapter" data-level="3.3" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#group"><i class="fa fa-check"></i><b>3.3</b> Group</a></li>
+<li class="chapter" data-level="3.4" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#parentheses-brackets-and-braces"><i class="fa fa-check"></i><b>3.4</b> Parentheses, Brackets, and Braces</a></li>
+<li class="chapter" data-level="3.5" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#sums-and-integrals"><i class="fa fa-check"></i><b>3.5</b> Sums and Integrals</a></li>
+<li class="chapter" data-level="3.6" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#fractions"><i class="fa fa-check"></i><b>3.6</b> Fractions</a></li>
+<li class="chapter" data-level="3.7" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#radical-signs-roots"><i class="fa fa-check"></i><b>3.7</b> Radical Signs / Roots</a></li>
+<li class="chapter" data-level="3.8" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#special-functions"><i class="fa fa-check"></i><b>3.8</b> Special Functions</a></li>
+<li class="chapter" data-level="3.9" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#special-symbols"><i class="fa fa-check"></i><b>3.9</b> Special Symbols</a></li>
+<li class="chapter" data-level="3.10" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#accents-and-diacritical-marks"><i class="fa fa-check"></i><b>3.10</b> Accents and Diacritical Marks</a></li>
+<li class="chapter" data-level="3.11" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#matrix"><i class="fa fa-check"></i><b>3.11</b> Matrix</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#matrix-with-delimiters"><i class="fa fa-check"></i><b>3.11.1</b> Matrix with Delimiters</a></li>
+<li class="chapter" data-level="3.11.2" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#dots"><i class="fa fa-check"></i><b>3.11.2</b> Dots</a></li>
+<li class="chapter" data-level="3.11.3" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#array"><i class="fa fa-check"></i><b>3.11.3</b> Array</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="mathematics-in-latex-markdown.html"><a href="mathematics-in-latex-markdown.html#simultaneous-equation"><i class="fa fa-check"></i><b>3.12</b> Simultaneous Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://aarondai.cn" target="blank">Blog: aarondai.cn</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Congren’s Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mathematics-in-latex-markdown" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Mathematics in LaTeX (Markdown)<a href="mathematics-in-latex-markdown.html#mathematics-in-latex-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Inline formulas use <code>$...$</code><br />
+Displayed formulas use <code>$$...$$</code></p>
+<p><a href="https://www.jianshu.com/p/a0aa94ef8ab2" class="uri">https://www.jianshu.com/p/a0aa94ef8ab2</a><br />
+<a href="https://www.overleaf.com/learn/latex/Matrices" class="uri">https://www.overleaf.com/learn/latex/Matrices</a><br />
+<a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" class="uri">https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference</a></p>
+<div id="greek-letters" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Greek Letters<a href="mathematics-in-latex-markdown.html#greek-letters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Letter</th>
+<th align="center">Command</th>
+<th align="center">Letter</th>
+<th align="center">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\alpha\)</span></td>
+<td align="center"><code>\alpha</code></td>
+<td align="center"><span class="math inline">\(\beta\)</span></td>
+<td align="center"><code>\beta</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\gamma\)</span></td>
+<td align="center"><code>\gamma</code></td>
+<td align="center"><span class="math inline">\(\delta\)</span></td>
+<td align="center"><code>\delta</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\epsilon\)</span></td>
+<td align="center"><code>\epsilon</code></td>
+<td align="center"><span class="math inline">\(\zeta\)</span></td>
+<td align="center"><code>\zeta</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\eta\)</span></td>
+<td align="center"><code>\eta</code></td>
+<td align="center"><span class="math inline">\(\theta\)</span></td>
+<td align="center"><code>\theta</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\iota\)</span></td>
+<td align="center"><code>\iota</code></td>
+<td align="center"><span class="math inline">\(\kappa\)</span></td>
+<td align="center"><code>\kappa</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\lambda\)</span></td>
+<td align="center"><code>\lambda</code></td>
+<td align="center"><span class="math inline">\(\mu\)</span></td>
+<td align="center"><code>\mu</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\nu\)</span></td>
+<td align="center"><code>\nu</code></td>
+<td align="center"><span class="math inline">\(\xi\)</span></td>
+<td align="center"><code>\xi</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\pi\)</span></td>
+<td align="center"><code>\pi</code></td>
+<td align="center"><span class="math inline">\(\rho\)</span></td>
+<td align="center"><code>\rho</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\sigma\)</span></td>
+<td align="center"><code>\sigma</code></td>
+<td align="center"><span class="math inline">\(\tau\)</span></td>
+<td align="center"><code>\tau</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\upsilon\)</span></td>
+<td align="center"><code>\upsilon</code></td>
+<td align="center"><span class="math inline">\(\phi\)</span></td>
+<td align="center"><code>\phi</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\chi\)</span></td>
+<td align="center"><code>\chi</code></td>
+<td align="center"><span class="math inline">\(\psi\)</span></td>
+<td align="center"><code>\psi</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\omega\)</span></td>
+<td align="center"><code>\omega</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>For uppercase letters, use <code>\Alpha</code>, <code>\Beta</code>, …, <code>\Gamma</code>.</p>
+</div>
+<div id="superscripts-and-subscripts" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Superscripts and Subscripts<a href="mathematics-in-latex-markdown.html#superscripts-and-subscripts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Superscripts use <code>^</code><br />
+Subscripts use <code>_</code></p>
+<p><code>x_1^3</code>: <span class="math inline">\(x_1^3\)</span><br />
+<code>log_2 8 = 3</code>: <span class="math inline">\(log_2 8 = 3\)</span></p>
+</div>
+<div id="group" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Group<a href="mathematics-in-latex-markdown.html#group" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A “group” is any formula surrounded by braces <code>{…}</code>.</p>
+<p><code>10^10</code>: <span class="math inline">\(10^10\)</span> (not wanted)<br />
+<code>10^{10}</code>: <span class="math inline">\(10^{10}\)</span><br />
+<code>x_i^2</code>: <span class="math inline">\(x_i^2\)</span><br />
+<code>x_{i^2}</code>: <span class="math inline">\(x_{i^2}\)</span><br />
+<code>{x_i}^2</code>: <span class="math inline">\({x_i}^2\)</span></p>
+</div>
+<div id="parentheses-brackets-and-braces" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Parentheses, Brackets, and Braces<a href="mathematics-in-latex-markdown.html#parentheses-brackets-and-braces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Parentheses use <code>()</code><br />
+Brackets use <code>[]</code><br />
+Braces use <code>\{</code> and <code>\}</code></p>
+<p>These do not scale with the formula in between.</p>
+<p><code>(\frac{\sqrt x}{y^3})</code>: <span class="math inline">\((\frac{\sqrt x}{y^3})\)</span></p>
+<p>Using <code>\left(</code> and <code>\right)</code> will make the sizes adjust automatically to the formula they enclose.</p>
+<p><code>\left(\frac{\sqrt x}{y^3}\right)</code>: <span class="math inline">\(\left(\frac{\sqrt x}{y^3}\right)\)</span></p>
+<p>There are also invisible parentheses, denoted by <code>.</code>.</p>
+<p><code>\left.x^2\right\rvert_3^5 = 5^2-3^2</code>: <span class="math inline">\(\left.x^2\right\rvert_3^5 = 5^2-3^2\)</span></p>
+</div>
+<div id="sums-and-integrals" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Sums and Integrals<a href="mathematics-in-latex-markdown.html#sums-and-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sums use: <code>\sum</code><br />
+Integrals use: <code>\int</code></p>
+<p><code>\sum_1^n</code>: <span class="math inline">\(\sum_1^n\)</span><br />
+<code>\sum_{i=0}^\infty i^2</code>: <span class="math inline">\(\sum_{i=0}^\infty i^2\)</span><br />
+<code>\int_a^b f(x)  \ dx</code>: <span class="math inline">\(\int_a^b f(x) \ dx\)</span></p>
+<p>Similarly,<br />
+<code>\prod</code>: <span class="math inline">\(\prod\)</span><br />
+<code>\bigcup</code>: <span class="math inline">\(\bigcup\)</span><br />
+<code>\bigcap</code>: <span class="math inline">\(\bigcap\)</span><br />
+<code>\iint</code>: <span class="math inline">\(\iint\)</span><br />
+<code>\iiint</code>: <span class="math inline">\(\iiint\)</span><br />
+<code>\idotsint</code>: <span class="math inline">\(\idotsint\)</span></p>
+</div>
+<div id="fractions" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Fractions<a href="mathematics-in-latex-markdown.html#fractions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>\frac{Formula \ 1}{Formula \ 2}</code>: <span class="math inline">\(\frac{Formula \ 1}{Formula \ 2}\)</span></p>
+</div>
+<div id="radical-signs-roots" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Radical Signs / Roots<a href="mathematics-in-latex-markdown.html#radical-signs-roots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>\sqrt[x]{y}</code>: <span class="math inline">\(\sqrt[x]{y}\)</span></p>
+</div>
+<div id="special-functions" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Special Functions<a href="mathematics-in-latex-markdown.html#special-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>\sin x</code>: <span class="math inline">\(\sin x\)</span><br />
+<code>\ln x</code>: <span class="math inline">\(\ln x\)</span><br />
+<code>\max(A,B,C)</code>: <span class="math inline">\(\max(A,B,C)\)</span><br />
+<code>\lim\limits_{x \to \infty}</code>: <span class="math inline">\(\lim\limits_{x \to \infty}\)</span></p>
+</div>
+<div id="special-symbols" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Special Symbols<a href="mathematics-in-latex-markdown.html#special-symbols" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Symbol</th>
+<th align="center">Command</th>
+<th align="center">Symbol</th>
+<th align="center">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\lt\)</span></td>
+<td align="center"><code>\lt</code></td>
+<td align="center"><span class="math inline">\(\gt\)</span></td>
+<td align="center"><code>\gt</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\le\)</span></td>
+<td align="center"><code>\le</code></td>
+<td align="center"><span class="math inline">\(\ge\)</span></td>
+<td align="center"><code>\ge</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\neq\)</span></td>
+<td align="center"><code>\neq</code></td>
+<td align="center"><span class="math inline">\(\times\)</span></td>
+<td align="center"><code>\times</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\div\)</span></td>
+<td align="center"><code>\div</code></td>
+<td align="center"><span class="math inline">\(\pm\)</span></td>
+<td align="center"><code>\pm</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\mp\)</span></td>
+<td align="center"><code>\mp</code></td>
+<td align="center"><span class="math inline">\(\dots\)</span></td>
+<td align="center"><code>\dots</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\cap\)</span></td>
+<td align="center"><code>\cap</code></td>
+<td align="center"><span class="math inline">\(\cup\)</span></td>
+<td align="center"><code>\cup</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\subset\)</span></td>
+<td align="center"><code>\subset</code></td>
+<td align="center"><span class="math inline">\(\supset\)</span></td>
+<td align="center"><code>\supset</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\subseteq\)</span></td>
+<td align="center"><code>\subseteq</code></td>
+<td align="center"><span class="math inline">\(\supseteq\)</span></td>
+<td align="center"><code>\supseteq</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\subsetneq\)</span></td>
+<td align="center"><code>\supsetneq</code></td>
+<td align="center"><span class="math inline">\(\supsetneq\)</span></td>
+<td align="center"><code>\supsetneq</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\emptyset\)</span></td>
+<td align="center"><code>\emptyset</code></td>
+<td align="center"><span class="math inline">\(\varnothing\)</span></td>
+<td align="center"><code>\varnothing</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\in\)</span></td>
+<td align="center"><code>\in</code></td>
+<td align="center"><span class="math inline">\(\notin\)</span></td>
+<td align="center"><code>\notin</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\to\)</span></td>
+<td align="center"><code>\to</code></td>
+<td align="center"><span class="math inline">\(\gets\)</span></td>
+<td align="center"><code>\gets</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\land\)</span></td>
+<td align="center"><code>\land</code></td>
+<td align="center"><span class="math inline">\(\lor\)</span></td>
+<td align="center"><code>\lor</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\exists\)</span></td>
+<td align="center"><code>\exists</code></td>
+<td align="center"><span class="math inline">\(\forall\)</span></td>
+<td align="center"><code>\forall</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\bot\)</span></td>
+<td align="center"><code>\bot</code></td>
+<td align="center"><span class="math inline">\(\top\)</span></td>
+<td align="center"><code>\top</code></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\vdash\)</span></td>
+<td align="center"><code>\vdash</code></td>
+<td align="center"><span class="math inline">\(\vDash\)</span></td>
+<td align="center"><code>\vDash</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\infty\)</span></td>
+<td align="center"><code>\infty</code></td>
+<td align="center"><span class="math inline">\(\approx\)</span></td>
+<td align="center"><code>\approx</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="accents-and-diacritical-marks" class="section level2 hasAnchor" number="3.10">
+<h2><span class="header-section-number">3.10</span> Accents and Diacritical Marks<a href="mathematics-in-latex-markdown.html#accents-and-diacritical-marks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>\hat x</code>: <span class="math inline">\(\hat x\)</span><br />
+<code>\widehat {xy}</code>: <span class="math inline">\(\widehat {xy}\)</span><br />
+<code>\bar x</code>: <span class="math inline">\(\bar x\)</span><br />
+<code>\overline {xyz}</code>: <span class="math inline">\(\overline {xyz}\)</span><br />
+<code>\vec x</code>: <span class="math inline">\(\vec x\)</span><br />
+<code>\overrightarrow {xy}</code>: <span class="math inline">\(\overrightarrow {xy}\)</span><br />
+<code>\overleftrightarrow {xy}</code>: <span class="math inline">\(\overleftrightarrow {xy}\)</span></p>
+</div>
+<div id="matrix" class="section level2 hasAnchor" number="3.11">
+<h2><span class="header-section-number">3.11</span> Matrix<a href="mathematics-in-latex-markdown.html#matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A plain matrix block begins with <code>\begin{matrix}</code> and ends with <code>\end{matrix}</code>.</p>
+<p><code>&amp;</code> uses for columns.<br />
+<code>\\</code> uses for rows.</p>
+<p><strong><em>For example,</em></strong></p>
+<p><code>$$\begin{matrix}</code><br />
+<code>1&amp;0&amp;0\\</code><br />
+<code>0&amp;1&amp;0\\</code><br />
+<code>0&amp;0&amp;1</code><br />
+<code>\end{matrix}$$</code></p>
+<p><span class="math display">\[\begin{matrix}
+1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1
+\end{matrix}\]</span></p>
+<div id="matrix-with-delimiters" class="section level3 hasAnchor" number="3.11.1">
+<h3><span class="header-section-number">3.11.1</span> Matrix with Delimiters<a href="mathematics-in-latex-markdown.html#matrix-with-delimiters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Parentheses:</p>
+<p><code>\begin{pmatrix}</code><br />
+<code>1 &amp; 2 &amp; 3\\</code><br />
+<code>a &amp; b &amp; c</code><br />
+<code>\end{pmatrix}</code></p>
+<p><span class="math display">\[\begin{pmatrix}
+1 &amp; 2 &amp; 3\\
+a &amp; b &amp; c
+\end{pmatrix}\]</span></p>
+<p>Brackets:</p>
+<p><code>\begin{bmatrix}</code><br />
+<code>1 &amp; 2 &amp; 3\\</code><br />
+<code>a &amp; b &amp; c</code><br />
+<code>\end{bmatrix}</code></p>
+<p><span class="math display">\[\begin{bmatrix}
+1 &amp; 2 &amp; 3\\
+a &amp; b &amp; c
+\end{bmatrix}\]</span></p>
+<p>Braces:</p>
+<p><code>\begin{Bmatrix}</code><br />
+<code>1 &amp; 2 &amp; 3\\</code><br />
+<code>a &amp; b &amp; c</code><br />
+<code>\end{Bmatrix}</code></p>
+<p><span class="math display">\[\begin{Bmatrix}
+1 &amp; 2 &amp; 3\\
+a &amp; b &amp; c
+\end{Bmatrix}\]</span></p>
+<p>Pipes:</p>
+<p><code>\begin{vmatrix}</code><br />
+<code>1 &amp; 2 &amp; 3\\</code><br />
+<code>a &amp; b &amp; c</code><br />
+<code>\end{vmatrix}</code></p>
+<p><span class="math display">\[\begin{vmatrix}
+1 &amp; 2 &amp; 3\\
+a &amp; b &amp; c
+\end{vmatrix}\]</span></p>
+<p>Double pipes:</p>
+<p><code>\begin{Vmatrix}</code><br />
+<code>1 &amp; 2 &amp; 3\\</code><br />
+<code>a &amp; b &amp; c</code><br />
+<code>\end{Vmatrix}</code></p>
+<p><span class="math display">\[\begin{Vmatrix}
+1 &amp; 2 &amp; 3\\
+a &amp; b &amp; c
+\end{Vmatrix}\]</span></p>
+</div>
+<div id="dots" class="section level3 hasAnchor" number="3.11.2">
+<h3><span class="header-section-number">3.11.2</span> Dots<a href="mathematics-in-latex-markdown.html#dots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>\cdots</code>: <span class="math inline">\(\cdots\)</span><br />
+<code>\vdots</code>: <span class="math inline">\(\vdots\)</span><br />
+<code>\ddots</code>: <span class="math inline">\(\ddots\)</span></p>
+<p><strong><em>For example,</em></strong></p>
+<p><code>$$\begin{bmatrix}</code><br />
+<code>{a_{11}}&amp;{a_{12}}&amp;{\cdots}&amp;{a_{1n}}\\</code><br />
+<code>{a_{21}}&amp;{a_{22}}&amp;{\cdots}&amp;{a_{2n}}\\</code><br />
+<code>{\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}\\</code><br />
+<code>{a_{m1}}&amp;{a_{m2}}&amp;{\cdots}&amp;{a_{mn}}</code><br />
+<code>\end{bmatrix}$$</code></p>
+<p><span class="math display">\[\begin{bmatrix}
+{a_{11}}&amp;{a_{12}}&amp;{\cdots}&amp;{a_{1n}}\\
+{a_{21}}&amp;{a_{22}}&amp;{\cdots}&amp;{a_{2n}}\\
+{\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}\\
+{a_{m1}}&amp;{a_{m2}}&amp;{\cdots}&amp;{a_{mn}}
+\end{bmatrix}\]</span></p>
+</div>
+<div id="array" class="section level3 hasAnchor" number="3.11.3">
+<h3><span class="header-section-number">3.11.3</span> Array<a href="mathematics-in-latex-markdown.html#array" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>left-align: <code>l</code><br />
+center-align: <code>c</code><br />
+right-align: <code>r</code><br />
+vertical line: <code>|</code><br />
+horizontal line: <code>\hline</code></p>
+<p><strong><em>For example,</em></strong></p>
+<p><code>$$\begin{array}{c|lll}</code><br />
+<code>{↓}&amp;{a}&amp;{b}&amp;{c}\\</code><br />
+<code>\hline</code><br />
+<code>{R_1}&amp;{c}&amp;{b}&amp;{a}\\</code><br />
+<code>{R_2}&amp;{b}&amp;{c}&amp;{c}</code><br />
+<code>\end{array}$$</code></p>
+<p><span class="math display">\[\begin{array}{c|lll}
+{↓}&amp;{a}&amp;{b}&amp;{c}\\
+\hline
+{R_1}&amp;{c}&amp;{b}&amp;{a}\\
+{R_2}&amp;{b}&amp;{c}&amp;{c}\\
+\end{array}\]</span></p>
+</div>
+</div>
+<div id="simultaneous-equation" class="section level2 hasAnchor" number="3.12">
+<h2><span class="header-section-number">3.12</span> Simultaneous Equation<a href="mathematics-in-latex-markdown.html#simultaneous-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>$$\begin{cases}</code><br />
+<code>a_1x+b_1y+c_1z=d_1\\</code><br />
+<code>a_2x+b_2y+c_2z=d_2\\</code><br />
+<code>a_3x+b_3y+c_3z=d_3</code><br />
+<code>\end{cases}</code></p>
+<p><span class="math display">\[\begin{cases}
+a_1x+b_1y+c_1z=d_1\\
+a_2x+b_2y+c_2z=d_2\\
+a_3x+b_3y+c_3z=d_3\\
+\end{cases}
+\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="matplotlib.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Mathematics-in-LaTeX--Markdown-.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["https://github.com/USERNAME/REPO/raw/BRANCH/02-Mathematics-in-LaTeX--Markdown-.Rmd"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

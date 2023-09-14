@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Matplotlib | Congren’s Notes</title>
+  <meta name="description" content="This is a notebook for Aaron." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Matplotlib | Congren’s Notes" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a notebook for Aaron." />
+  <meta name="github-repo" content="congrendai/congrendai.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Matplotlib | Congren’s Notes" />
+  
+  <meta name="twitter:description" content="This is a notebook for Aaron." />
+  
+
+<meta name="author" content="Author: Congren Dai" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="index.html"/>
+<link rel="next" href="mathematics-in-latex.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #232629;
+    color: #7a7c7d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+div.sourceCode
+  { color: #cfcfc2; background-color: #232629; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #cfcfc2; } /* Normal */
+code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+code span.an { color: #3f8058; } /* Annotation */
+code span.at { color: #2980b9; } /* Attribute */
+code span.bn { color: #f67400; } /* BaseN */
+code span.bu { color: #7f8c8d; } /* BuiltIn */
+code span.cf { color: #fdbc4b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #3daee9; } /* Char */
+code span.cn { color: #27aeae; font-weight: bold; } /* Constant */
+code span.co { color: #7a7c7d; } /* Comment */
+code span.cv { color: #7f8c8d; } /* CommentVar */
+code span.do { color: #a43340; } /* Documentation */
+code span.dt { color: #2980b9; } /* DataType */
+code span.dv { color: #f67400; } /* DecVal */
+code span.er { color: #da4453; text-decoration: underline; } /* Error */
+code span.ex { color: #0099ff; font-weight: bold; } /* Extension */
+code span.fl { color: #f67400; } /* Float */
+code span.fu { color: #8e44ad; } /* Function */
+code span.im { color: #27ae60; } /* Import */
+code span.in { color: #c45b00; } /* Information */
+code span.kw { color: #cfcfc2; font-weight: bold; } /* Keyword */
+code span.op { color: #cfcfc2; } /* Operator */
+code span.ot { color: #27ae60; } /* Other */
+code span.pp { color: #27ae60; } /* Preprocessor */
+code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #da4453; } /* SpecialString */
+code span.st { color: #f44f4f; } /* String */
+code span.va { color: #27aeae; } /* Variable */
+code span.vs { color: #da4453; } /* VerbatimString */
+code span.wa { color: #da4453; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><img src="images/logo.png"></li>
+
+<li class="divider"></li>
+<li class="part"><span><b>Linux</b></span></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Linux Commands</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#frequently-used"><i class="fa fa-check"></i><b>1.1</b> Frequently-used Commands</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#ls"><i class="fa fa-check"></i>ls</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#touch"><i class="fa fa-check"></i>touch</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#echo"><i class="fa fa-check"></i>echo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#mv"><i class="fa fa-check"></i>mv</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cat"><i class="fa fa-check"></i>cat</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#less"><i class="fa fa-check"></i>less</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#head"><i class="fa fa-check"></i>head</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tail"><i class="fa fa-check"></i>tail</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#mkdir"><i class="fa fa-check"></i>mkdir</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#rm"><i class="fa fa-check"></i>rm</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cp"><i class="fa fa-check"></i>cp</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tar"><i class="fa fa-check"></i>tar</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#find"><i class="fa fa-check"></i>find</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#scp"><i class="fa fa-check"></i>scp</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#curl"><i class="fa fa-check"></i>curl</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#chmod"><i class="fa fa-check"></i>chmod</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#grep"><i class="fa fa-check"></i>grep</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#shortcuts-for-shell"><i class="fa fa-check"></i><b>1.2</b> Shortcuts for Shell</a></li>
+</ul></li>
+<li class="part"><span><b>Python</b></span></li>
+<li class="chapter" data-level="2" data-path="matplotlib.html"><a href="matplotlib.html"><i class="fa fa-check"></i><b>2</b> Matplotlib</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="matplotlib.html"><a href="matplotlib.html#beginners"><i class="fa fa-check"></i><b>2.1</b> Beginners</a></li>
+<li class="chapter" data-level="2.2" data-path="matplotlib.html"><a href="matplotlib.html#intermediate-users"><i class="fa fa-check"></i><b>2.2</b> Intermediate Users</a></li>
+<li class="chapter" data-level="2.3" data-path="matplotlib.html"><a href="matplotlib.html#tips-tricks"><i class="fa fa-check"></i><b>2.3</b> Tips &amp; Tricks</a></li>
+</ul></li>
+<li class="part"><span><b>LaTeX</b></span></li>
+<li class="chapter" data-level="3" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html"><i class="fa fa-check"></i><b>3</b> Mathematics in LaTeX</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#greek-letters"><i class="fa fa-check"></i><b>3.1</b> Greek Letters</a></li>
+<li class="chapter" data-level="3.2" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#superscripts-and-subscripts"><i class="fa fa-check"></i><b>3.2</b> Superscripts and Subscripts</a></li>
+<li class="chapter" data-level="3.3" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#group"><i class="fa fa-check"></i><b>3.3</b> Group</a></li>
+<li class="chapter" data-level="3.4" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#parentheses-brackets-and-braces"><i class="fa fa-check"></i><b>3.4</b> Parentheses, Brackets, and Braces</a></li>
+<li class="chapter" data-level="3.5" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#sums-and-integrals"><i class="fa fa-check"></i><b>3.5</b> Sums and Integrals</a></li>
+<li class="chapter" data-level="3.6" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#fractions"><i class="fa fa-check"></i><b>3.6</b> Fractions</a></li>
+<li class="chapter" data-level="3.7" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#radical-signs-roots"><i class="fa fa-check"></i><b>3.7</b> Radical Signs / Roots</a></li>
+<li class="chapter" data-level="3.8" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#special-functions"><i class="fa fa-check"></i><b>3.8</b> Special Functions</a></li>
+<li class="chapter" data-level="3.9" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#special-symbols"><i class="fa fa-check"></i><b>3.9</b> Special Symbols</a></li>
+<li class="chapter" data-level="3.10" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#accents-and-diacritical-marks"><i class="fa fa-check"></i><b>3.10</b> Accents and Diacritical Marks</a></li>
+<li class="chapter" data-level="3.11" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#matrix"><i class="fa fa-check"></i><b>3.11</b> Matrix</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#matrix-with-delimiters"><i class="fa fa-check"></i><b>3.11.1</b> Matrix with Delimiters</a></li>
+<li class="chapter" data-level="3.11.2" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#dots"><i class="fa fa-check"></i><b>3.11.2</b> Dots</a></li>
+<li class="chapter" data-level="3.11.3" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#array"><i class="fa fa-check"></i><b>3.11.3</b> Array</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="mathematics-in-latex.html"><a href="mathematics-in-latex.html#simultaneous-equation"><i class="fa fa-check"></i><b>3.12</b> Simultaneous Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://aarondai.cn" target="blank">Blog: aarondai.cn</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Congren’s Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="matplotlib" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Matplotlib<a href="matplotlib.html#matplotlib" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>There are three Matplotlib cheatsheets for beginners (Figure <a href="matplotlib.html#fig:beginner">2.1</a>), intermediate users (Figure <a href="matplotlib.html#fig:intermediate">2.2</a>), and some tips and tricks (Figure <a href="matplotlib.html#fig:tips">2.3</a>).</p>
+<p><a href="https://matplotlib.org/cheatsheets/" class="uri">https://matplotlib.org/cheatsheets/</a></p>
+<div id="beginners" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Beginners<a href="matplotlib.html#beginners" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:beginner"></span>
+<img src="matplotlib/handout-beginner.png" alt="Matplotlib for beginners" width="100%" />
+<p class="caption">
+Figure 2.1: Matplotlib for beginners
+</p>
+</div>
+</div>
+<div id="intermediate-users" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Intermediate Users<a href="matplotlib.html#intermediate-users" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:intermediate"></span>
+<img src="matplotlib/handout-intermediate.png" alt="Matplotlib for intermediate users" width="100%" />
+<p class="caption">
+Figure 2.2: Matplotlib for intermediate users
+</p>
+</div>
+</div>
+<div id="tips-tricks" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Tips &amp; Tricks<a href="matplotlib.html#tips-tricks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tips"></span>
+<img src="matplotlib/handout-tips.png" alt="Matplotlib tips and tricks" width="100%" />
+<p class="caption">
+Figure 2.3: Matplotlib tips and tricks
+</p>
+</div>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mathematics-in-latex.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-matplotlib.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["https://github.com/USERNAME/REPO/raw/BRANCH/01-matplotlib.Rmd"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
